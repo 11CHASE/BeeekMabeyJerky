@@ -21,29 +21,28 @@ body {
     margin: 0; /* Remove margin from list */
     padding: 0; /* Remove padding from list */
     display: flex; /* Set display to flex for horizontal layout */
-    justify-content: space-between; /* Set spacing between list items */
+    justify-content: center;
     align-items: center; /* Vertically center list items */
   }
 
-  .h--left {
-    margin-left: 15px;
-  }
-
-  .h--right {
-    margin-right: 15px;
+  .Logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
   }
   
   /* Style for navigation links */
-  nav a {
+  .list--item {
     display: block; /* Display links as block element */
     padding: 10px 15px; /* Add padding to links */
     text-decoration: none; /* Remove underline from links */
     color: #fff; /* Set text color for links */
-    margin: 0 5px; /* Add margin to the left and right of links */
+    margin: 0 10px; /* Add margin to the left and right of links */
+    border-radius: 4px;
   }
   
   /* Style for hovered navigation links */
-  nav a:hover {
+  .list--item:hover {
     background-color: #ddd; /* Set background color for hovered links */
     color: #333; /* Set text color for hovered links */
     cursor: pointer; /* Set cursor to pointer on hover */
@@ -54,7 +53,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 58px; /* Add margin to main to avoid overlapping with header */
+    margin-top: 74px; /* Add margin to main to avoid overlapping with header */
   }
   
   .product {
