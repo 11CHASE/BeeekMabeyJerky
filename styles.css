@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  /* Style for header element */
+  header {
+    background-color: #333; /* Set background color for header */
+    color: #fff; /* Set text color for header */
+    padding: 10px; /* Add padding to header */
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Set position from top to 0 */
+    width: 100%; /* Set width to 100% */
+    z-index: 999; /* Set z-index to bring header to front */
+  }
+  
+  /* Style for navigation list */
+  nav ul {
+    list-style: none; /* Remove bullets from list */
+    margin: 0; /* Remove margin from list */
+    padding: 0; /* Remove padding from list */
+    display: flex; /* Set display to flex for horizontal layout */
+    justify-content: space-between; /* Set spacing between list items */
+    align-items: center; /* Vertically center list items */
+  }
+
+  .h--left {
+    margin-left: 15px;
+  }
+
+  .h--right {
+    margin-right: 15px;
+  }
+  
+  /* Style for navigation links */
+  nav a {
+    display: block; /* Display links as block element */
+    padding: 10px 15px; /* Add padding to links */
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set text color for links */
+    margin: 0 5px; /* Add margin to the left and right of links */
+  }
+  
+  /* Style for hovered navigation links */
+  nav a:hover {
+    background-color: #ddd; /* Set background color for hovered links */
+    color: #333; /* Set text color for hovered links */
+    cursor: pointer; /* Set cursor to pointer on hover */
+  }
+  
+  main {
+    background-color: #B03628;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 58px; /* Add margin to main to avoid overlapping with header */
+  }
+  
+  .product {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    flex-basis: calc(33.33% - 20px);
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product h2 {
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .product button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .product button:hover {
+    background-color: #B03628;
+  }
+  
+  footer {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer a {
+    color: #333;
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  footer img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+  
+  /* THIS IS FOR MOBILE OPTIMIZATION */
+
+  @media only screen and (max-width: 712px) {
+    main {
+        background-color: #B03628;
+        display: block;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 0;
+      }
+
+      .product {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        flex-basis: calc(33.33% - 20px);
+        margin: 25px 10px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none; /* Remove bullets from list */
+        margin: 0; /* Remove margin from list */
+        padding: 0; /* Remove padding from list */
+        display: block;
+        text-align: center;
+      }
+
+      .h--left {
+        margin-left: 0px;
+      }
+    
+      .h--right {
+        margin-right: 0px;
+      }
+
+      header {
+        background-color: #333; /* Set background color for header */
+        color: #fff; /* Set text color for header */
+        padding: 10px; /* Add padding to header */
+        position: static; /* Set position to fixed */
+        top: 0; /* Set position from top to 0 */
+        width: 100%; /* Set width to 100% */
+      }
+
+  }
