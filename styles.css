@@ -8,52 +8,66 @@ body {
   header {
     background-color: #333; /* Set background color for header */
     color: #fff; /* Set text color for header */
-    padding: 10px; /* Add padding to header */
-    position: fixed; /* Set position to fixed */
-    top: 0; /* Set position from top to 0 */
-    width: 100%; /* Set width to 100% */
-    z-index: 999; /* Set z-index to bring header to front */
-  }
-  
-  /* Style for navigation list */
-  nav ul {
-    list-style: none; /* Remove bullets from list */
-    margin: 0; /* Remove margin from list */
-    padding: 0; /* Remove padding from list */
-    display: flex; /* Set display to flex for horizontal layout */
-    justify-content: center;
-    align-items: center; /* Vertically center list items */
   }
 
-  .Logo {
-    width: 50px;
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .nav-menu-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    font-weight: bold;
+  }
+
+  .logo,
+  .nav-bradning {
     height: 50px;
-    margin: 0 10px;
+    width: 50px;
   }
-  
-  /* Style for navigation links */
-  .list--item {
-    display: block; /* Display links as block element */
-    padding: 10px 15px; /* Add padding to links */
-    text-decoration: none; /* Remove underline from links */
-    color: #fff; /* Set text color for links */
-    margin: 0 10px; /* Add margin to the left and right of links */
-    border-radius: 4px;
+
+  .nav-link {
+    transition: 0.3s ease;
   }
-  
-  /* Style for hovered navigation links */
-  .list--item:hover {
-    background-color: #ddd; /* Set background color for hovered links */
-    color: #333; /* Set text color for hovered links */
-    cursor: pointer; /* Set cursor to pointer on hover */
+
+  .nav-link:hover {
+    color: #B03628;
   }
-  
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
   main {
     background-color: #B03628;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    margin-top: 74px; /* Add margin to main to avoid overlapping with header */
   }
   
   .product {
@@ -133,7 +147,6 @@ body {
         display: block;
         justify-content: space-between;
         padding: 20px;
-        margin-top: 0;
       }
 
       .product {
@@ -146,29 +159,44 @@ body {
         text-align: center;
       }
 
-      nav ul {
-        list-style: none; /* Remove bullets from list */
-        margin: 0; /* Remove margin from list */
-        padding: 0; /* Remove padding from list */
+      .hamburger {
         display: block;
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
         text-align: center;
+        transition: 0.3s;
       }
 
-      .h--left {
-        margin-left: 0px;
-      }
-    
-      .h--right {
-        margin-right: 0px;
+      .nav-menu-li {
+        padding: 0 40px;
       }
 
-      header {
-        background-color: #333; /* Set background color for header */
-        color: #fff; /* Set text color for header */
-        padding: 10px; /* Add padding to header */
-        position: static; /* Set position to fixed */
-        top: 0; /* Set position from top to 0 */
-        width: 100%; /* Set width to 100% */
+      .nav-item {
+        margin: 16px 0;
+      }
+
+      .nav-menu.active {
+        left: 0;
       }
 
   }
